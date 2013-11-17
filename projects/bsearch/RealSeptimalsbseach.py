@@ -53,8 +53,41 @@ def search(item,numbers):
                         return scope                                            # return correct index
 
 
-    
+#Contee's bsearch
 
+    
+def  bsearch(item, list):
+
+    low = 0
+
+    up = len(list)-1
+     
+    
+#setting the range to manipulate list for search. 
+
+    while low <= up:
+        
+        
+        mid= (low + up) / 2
+        
+        if list[mid] < item:
+
+            low = mid +1
+
+        elif list[mid] > item:
+
+            up = mid - 1 
+
+        elif list[mid] == item:
+
+            
+            return mid 
+
+        else:
+            return -1
+
+
+blist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 
 
 
